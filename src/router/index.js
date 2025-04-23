@@ -18,7 +18,7 @@ const routes = [
 	{
 		path: "/404/",
 		name: "Error",
-		component: () => import("@/components/Error.vue"),
+		component: () => import("@/components/error.vue"),
 		meta: { requiresAuth: false },
 	},
 ];
