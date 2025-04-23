@@ -83,7 +83,7 @@
 			};
 		},
 		methods: {
-			hhandleFileChange(event) {
+			handleFileChange(event) {
 				const file = event.target.files[0];
 				const maxSize = 100; // Максимальный размер в МБ
 
