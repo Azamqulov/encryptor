@@ -1,21 +1,20 @@
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
+import { defineConfig } from "vite";
+import vue from "@vitejs/plugin-vue";
+import path from "path";
 
-// https://vitejs.dev/config/
 export default defineConfig({
+  base: "/",
   plugins: [vue()],
-  build: {
-    minify: 'esbuild', // terser kerak bo'lmaydi
-    outDir: 'dist',    // build qilingan fayllar shu papkaga tushadi
-    sourcemap: false,  // false bo'lsa, source map yaratilmaydi
-  },
   resolve: {
     alias: {
-      '@': '/src', // @ belgisi orqali src papkasiga murojaat qilsa bo'ladi
-    }
+      "@": path.resolve(__dirname, "./src"),
+    },
   },
-  server: {
-    port: 3000,   // dev server uchun port
-    open: true    // brauzerni avtomatik ochadi
-  }
-})
+  build: {
+    minify: 'esbuild',
+    outDir: "dist",
+    assetsDir: "assets",
+    sourcemap: false,
+    minify: "terser",
+  },
+});
