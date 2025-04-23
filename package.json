@@ -1,0 +1,27 @@
+{
+	"name": "encryptor-vue",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"engines": {
+		"node": ">=14.0.0"
+	},
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview",
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d dist"
+	},
+	"dependencies": {
+		"crypto-js": "^4.1.1",
+		"vue": "^3.3.4",
+		"vue-router": "^4.0.13",
+		"vue3-toastify": "^0.1.14"
+	},
+	"devDependencies": {
+		"@vitejs/plugin-vue": "^4.2.3",
+		"gh-pages": "^6.0.0",
+		"vite": "^4.4.5"
+	}
+}
